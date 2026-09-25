@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface":"#1c1c18","surface-container-highest":"#e5e2dc","on-primary-fixed-variant":"#663d18","on-tertiary":"#ffffff","on-surface-variant":"#51443b","on-primary-container":"#fffbff","on-tertiary-container":"#fffbff","surface-variant":"#e5e2dc","outline":"#83746a","tertiary-container":"#9d6a2c","surface-container-high":"#ebe8e2","on-secondary-fixed":"#161e0c","secondary-fixed-dim":"#c0caae","tertiary":"#815215","primary":"#7f522b","secondary-container":"#d9e4c7","on-secondary-container":"#5c664f","on-error-container":"#93000a","tertiary-fixed":"#ffdcbb","surface-container-lowest":"#ffffff","on-background":"#1c1c18","primary-fixed":"#ffdcc3","on-primary":"#ffffff","inverse-on-surface":"#f3f0ea","surface-tint":"#82542d","surface-container-low":"#f6f3ed","error":"#ba1a1a","secondary":"#58624b","on-secondary-fixed-variant":"#404a34","on-error":"#ffffff","inverse-primary":"#f6ba8b","secondary-fixed":"#dce6c9","on-secondary":"#ffffff","surface-container":"#f0eee8","primary-container":"#9b6a41","tertiary-fixed-dim":"#faba75","surface-bright":"#fcf9f3","surface":"#fcf9f3","outline-variant":"#d5c3b7","on-primary-fixed":"#2f1500","on-tertiary-fixed":"#2b1700","error-container":"#ffdad6","background":"#fcf9f3","surface-dim":"#dcdad4","inverse-surface":"#31312d","on-tertiary-fixed-variant":"#673d00","primary-fixed-dim":"#f6ba8b"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"3rem","space-md":"1rem","gutter-mobile":"1rem","margin-mobile":"1.25rem","gutter":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"3rem","space-lg":"1.75rem"},"fontFamily":{"title-md":["Plus Jakarta Sans"],"display-lg":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"title-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"headline-md":["Playfair Display"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"]},"fontSize":{"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0.01em","fontWeight":"600"}],"display-lg":["56px",{"lineHeight":"68px","letterSpacing":"-0.02em","fontWeight":"500"}],"display-lg-mobile":["38px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"500"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"title-lg":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"46px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><aside class="fixed right-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-6 px-4 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-6"><div class="flex items-center justify-between px-3"><div class="flex items-center gap-3"><span class="font-headline-md text-headline-md tracking-wider text-primary font-bold">LUMO</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">لوحة الإدارة</span></div></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-title-md"><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="overview-analytics" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>الرئيسية / نظرة عامة</span></a><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all bg-primary-container text-on-primary-container font-title-md" data-path="products-pricing-management" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>كتالوج وإدارة المنتجات</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="add-new-product" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span>إضافة منتج جديد</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="orders-shipping" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span>إدارة الطلبات والمبيعات</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="customers-inquiries" href="#"><span class="material-symbols-outlined text-[20px]">forum</span><span>العملاء والمحادثات</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="artisan-workshop-stock" href="#"><span class="material-symbols-outlined text-[20px]">handyman</span><span>المخزون وتنبيهات الحرفيين</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="store-settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>الإعدادات والربط</span></a></nav></div><div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container"><img alt="Profile" class="w-9 h-9 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VEByP8qPOLPra0ftH47GJl-qDwU1QZCemcxYVmCGmlOUStmEgRE9VBhL5t_aQJgAsu0riFJSGb01b6ZaQYXW92ta-ypkDMwnPr5EtO-apUtOWCmtkZGSmjYq2jgUuooxPpZlTWxqjQNylgwXZxLOYZP52OZ-dqahJ_qQwPPf4zn15cfSO6ywO355JwDlchbsKDcz2H7Xhaon9Oup0B6rpPzjXvtFoBaz1f4Eznx8irc-_Xt3qJlF7xPAYfSyHTmSTzqSIBQxFZWSM"/><div class="flex flex-col min-w-0 flex-1"><span class="font-title-md text-body-sm text-on-surface truncate font-semibold">أحمد مصطفى</span><span class="font-body-sm text-label-sm text-on-surface-variant truncate">مدير المتجر / الحرفي المعتمد</span></div></div></aside><div class="pr-72 min-h-screen flex flex-col"><header class="fixed top-0 right-72 left-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-8"><div class="flex items-center gap-4 w-96"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute right-3 text-on-surface-variant text-[20px] pointer-events-none">search</span><input class="w-full pr-10 pl-4 py-2 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container" placeholder="البحث عن منتج، رمز SKU، أو صنف خامات..." type="text"/></div></div><div class="flex items-center gap-4"><a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-primary hover:bg-primary-fixed hover:text-on-primary-fixed font-title-md text-body-sm transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">open_in_new</span><span>زيارة المتجر</span></a><button class="relative p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span></button><a class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-on-primary font-title-md text-body-sm rounded-xl hover:bg-primary-container hover:text-on-primary-container transition-all shadow-[0_4px_16px_rgba(127,82,43,0.18)]" data-path="add-new-product" href="#"><span class="material-symbols-outlined text-[20px]">add</span><span>إضافة منتج جديد</span></a><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VEByP8qPOLPra0ftH47GJl-qDwU1QZCemcxYVmCGmlOUStmEgRE9VBhL5t_aQJgAsu0riFJSGb01b6ZaQYXW92ta-ypkDMwnPr5EtO-apUtOWCmtkZGSmjYq2jgUuooxPpZlTWxqjQNylgwXZxLOYZP52OZ-dqahJ_qQwPPf4zn15cfSO6ywO355JwDlchbsKDcz2H7Xhaon9Oup0B6rpPzjXvtFoBaz1f4Eznx8irc-_Xt3qJlF7xPAYfSyHTmSTzqSIBQxFZWSM"/></div></header><main class="w-full pt-16 bg-surface flex-1 px-8 py-8"><div class="flex flex-col w-full gap-6">
+<!-- Top Announcement / Price Guidance Bar -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-l from-primary-fixed/60 via-surface-container to-surface-container-high p-5 shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 relative z-10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-md shrink-0">
+<span class="material-symbols-outlined text-[26px]">calculate</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">مُوجّه التسعير الحِرفي الذكي</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">مُحدّث لأسعار خامات النول والأخشاب اليوم</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            يمكنك تعديل أسعار البيع والمخزون مباشرة من داخل الجدول أدناه دون مغادرة الصفحة. انقر على أي سعر أو مخزون للتعديل الفوري.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<div class="hidden sm:flex flex-col items-end px-3 py-1.5 rounded-lg bg-surface-container-lowest/80 backdrop-blur-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">متوسط هامش الربح الحالي</span>
+<span class="font-title-md text-title-md text-secondary font-bold">41.8% <span class="text-[12px] font-normal text-on-surface-variant">(+3.2% هذا الشهر)</span></span>
+</div>
+<button class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest text-primary font-title-md text-body-sm hover:bg-surface-container-high transition-all shadow-sm" id="toggle-calculator-btn" onclick="document.getElementById('craft-calc-drawer').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>حاسبة تسعير القطعة</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Calculator Slide-down (Craft Cost Estimator) -->
+<div class="hidden transition-all duration-300" id="craft-calc-drawer">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-md grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">تكلفة الخامة الخام (كتان / فخار / خشب)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low px-3 py-2 pl-12 rounded-lg font-title-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" id="calc-material" placeholder="0" type="number" value="650"/>
+<span class="absolute left-3 top-2.5 font-label-sm text-label-sm text-on-surface-variant">ج.م</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">ساعات عمل الحرفي (سعر الساعة: 120 ج.م)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low px-3 py-2 pl-12 rounded-lg font-title-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" id="calc-hours" placeholder="ساعات" step="0.5" type="number" value="4.5"/>
+<span class="absolute left-3 top-2.5 font-label-sm text-label-sm text-on-surface-variant">ساعة</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">هامش ربح الورشة المستهدف</label>
+<select class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary" id="calc-margin">
+<option value="0.35">35% (مفروشات وأسرّة كلاسيكية)</option>
+<option selected="" value="0.45">45% (إضاءات فخار وخشب يدوي)</option>
+<option value="0.55">55% (قطع فريدة ومعارض حصرية)</option>
+</select>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex-1 bg-surface-container p-2.5 rounded-lg flex flex-col justify-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">السعر المقترح للمستهلك</span>
+<span class="font-title-lg text-title-lg text-primary font-bold" id="calc-result">2,165 ج.م</span>
+</div>
+<button class="px-4 py-3 bg-primary text-on-primary rounded-lg font-title-md text-body-sm hover:bg-primary-container transition-all flex items-center justify-center shrink-0" onclick="applySuggestedPrice()">
+          تطبيق
+        </button>
+</div>
+</div>
+</div>
+<!-- Header Action Row -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md mb-1">
+<span>كتالوج الورشة</span>
+<span>/</span>
+<span class="text-primary font-bold">إدارة الأسعار والتوافر</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">كتالوج المنتجات وتعديل الأسعار</h1>
+</div>
+<div class="flex flex-wrap items-center gap-2.5">
+<!-- Bulk Edit Trigger -->
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container-high text-on-surface font-title-md text-body-sm hover:bg-surface-variant transition-all shadow-sm" onclick="toggleBulkModal()">
+<span class="material-symbols-outlined text-[19px]">fact_check</span>
+<span>تعديل جماعي للأسعار (Bulk Edit)</span>
+</button>
+<!-- Quick Export / Report -->
+<button class="p-2.5 rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" title="تصدير ملف Excel">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<!-- Primary Add Button -->
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary text-on-primary font-title-md text-body-sm hover:bg-primary-container hover:text-on-primary-container shadow-md transition-all" data-path="add-new-product" href="#">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>إضافة منتج جديد</span>
+</a>
+</div>
+</div>
+<!-- Filters & Search Canvas -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-4">
+<!-- Row 1: Search and Primary Category Pills -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
+<!-- Search Box with Material Tags quick auto-complete -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute right-3.5 top-2.5 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pr-11 pl-4 py-2.5 bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container focus:ring-1 focus:ring-primary transition-all" id="product-search" placeholder="ابحث بالاسم، رمز SKU، أو بالخامة: كتان، خشب زان، فخار سيوي، نحاس معتق..." type="text"/>
+</div>
+<!-- Quick Material Filter Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-1 shrink-0">الخامات:</span>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-md bg-surface-container text-on-surface-variant hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors shrink-0">كتان نقي</button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-md bg-surface-container text-on-surface-variant hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors shrink-0">خشب زان</button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-md bg-surface-container text-on-surface-variant hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors shrink-0">صلصال سيوي</button>
+<button class="px-2.5 py-1 rounded-full text-label-sm font-label-md bg-surface-container text-on-surface-variant hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors shrink-0">نحاس يدوي</button>
+</div>
+</div>
+<!-- Row 2: Category Tabs, Stock Filter & Sorting -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 pt-3 bg-surface-container-low/40 p-2.5 rounded-lg">
+<!-- Category Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0">
+<button class="px-3.5 py-1.5 rounded-lg font-title-md text-label-md bg-primary text-on-primary shadow-sm shrink-0">
+          الكل (42)
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg font-title-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high transition-colors shrink-0">
+          الإضاءة والثريات (18)
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg font-title-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high transition-colors shrink-0">
+          مفروشات وأسرّة (16)
+        </button>
+<button class="px-3.5 py-1.5 rounded-lg font-title-md text-label-md bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high transition-colors shrink-0">
+          قطع مخصصة وتجهيز فندقي (8)
+        </button>
+</div>
+<!-- Secondary Selectors: Stock status & Sorting -->
+<div class="flex items-center gap-2 self-end md:self-auto">
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-2.5 py-1 shadow-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] ml-1.5">filter_list</span>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer py-1">
+<option>كافة حالات التوفر</option>
+<option>متوفر في الورشة (جاهز للشحن)</option>
+<option>يُصنع بالطلب (Pre-order)</option>
+<option>نفد المخزون</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-container-lowest rounded-lg px-2.5 py-1 shadow-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] ml-1.5">swap_vert</span>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer py-1">
+<option>الترتيب: الأحدث إضافة</option>
+<option>السعر: من الأعلى للأدنى</option>
+<option>السعر: من الأدنى للأعلى</option>
+<option>الأكثر مبيعاً</option>
+<option>أعلى هامش ربح</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Active Changes Bar (Sticky when edited) -->
+<div class="sticky top-20 z-30 flex items-center justify-between p-3.5 px-6 rounded-xl bg-on-surface text-inverse-on-surface shadow-xl border-l-4 border-primary transition-all duration-300" id="unsaved-banner">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed animate-ping"></span>
+<span class="font-title-md text-body-sm">تم تعديل <strong class="text-tertiary-fixed underline font-bold" id="edited-count">2</strong> أسعار منتجات حية</span>
+<span class="hidden sm:inline font-body-sm text-label-md text-surface-container-highest">| التغييرات لم تُحفظ في واجهة المتجر بعد</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-3 py-1.5 rounded-lg text-surface-container-highest hover:bg-surface-variant/20 font-body-sm text-body-sm transition-colors" onclick="discardChanges()">
+        إلغاء
+      </button>
+<button class="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-primary-fixed text-on-primary-fixed font-title-md text-body-sm hover:bg-tertiary-fixed transition-colors shadow" onclick="saveAllChanges()">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>حفظ التعديلات الحية</span>
+</button>
+</div>
+</div>
+<!-- Smart Inline Management Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-right border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<th class="py-3.5 px-4 w-12 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-3.5 px-4">القطعة والحِرفة</th>
+<th class="py-3.5 px-4">كود التخزين (SKU)</th>
+<th class="py-3.5 px-4 min-w-[200px]">السعر الحالي للعميل</th>
+<th class="py-3.5 px-4">التكلفة / الهامش</th>
+<th class="py-3.5 px-4 min-w-[170px]">المخزون ووقت الإعداد</th>
+<th class="py-3.5 px-4 text-center">عرض بالمتجر</th>
+<th class="py-3.5 px-4 text-center">المبيعات</th>
+<th class="py-3.5 px-4 text-center">إجراءات</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Product 1: Linen Bedding (Sina) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-4 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container-high shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Warm natural artisan stonewashed linen bedding folded gently on reclaimed raw oak wood bed, soft natural morning ambient window lighting, serene muted warm tone, editorial luxury photograph" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG1g5o5e7f-8McYo4CzFb_G4OF2YLH93E1CTIVMI6AuowuqP9wL2iJ1R4CZXX3QMsiBysAUUCLUe9yiIZPWxRIVkkwxO3fjF10H75G00yjiBo4EvqNGZHNRteqvbCLb3updcPbD3iK9DaMh0Jsb4XIfEn0E-TgIDlz5RCRFJqm-FmGjYGSzAVJD561MKuDv0qrzR5OKOWONF8nlU87b7Q-dAvQIizlj6QSUSs4nQL1_-X3tbbK17IagA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<a class="font-title-md text-body-md text-on-surface hover:text-primary font-semibold truncate transition-colors" href="#">
+                    طقم سرير كتان «سينا» المغسول بالحجر
+                  </a>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">مفروشات وأسرّة</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#B88358]"></span> كتان سيناوي 100%
+                    </span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 font-mono text-label-md text-on-surface-variant">LUM-BD-048</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="relative flex items-center">
+<input class="w-28 bg-surface-container-low focus:bg-surface-container-lowest px-2.5 py-1.5 pl-8 rounded-lg font-title-md text-body-md text-on-surface font-semibold focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" onchange="markEdited(this)" type="text" value="4,850"/>
+<span class="absolute left-2.5 font-label-sm text-label-sm text-on-surface-variant pointer-events-none">ج.م</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="line-through text-on-surface-variant font-label-sm text-label-sm">5,200 ج.م</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/40 px-1.5 py-0.2 rounded font-semibold">-7%</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold">2,750 ج.م</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">هامش: 43.3%</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<input class="w-14 bg-surface-container-low px-2 py-0.5 rounded font-title-md text-body-sm text-on-surface text-center focus:outline-none focus:ring-1 focus:ring-primary" onchange="markEdited(this)" type="number" value="12"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">جاهز للشحن</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">مدة التصنيع للإضافي: 3 أيام</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex flex-col items-center">
+<span class="font-title-md text-body-md font-semibold">142</span>
+<div class="flex items-center text-tertiary text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="معاينة في صفحة المتجر">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="تكرار كمنتج جديد">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors" title="حذف من الكتالوج">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Product 2: Pendant Light (Dawaha) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group bg-primary-fixed/5">
+<td class="py-4 px-4 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container-high shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Artisanal handwoven organic wicker and linen organic pendant light glowing warm 2700k light in a minimalist wabi-sabi room with sand plaster wall, cinematic interior photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3dZo8MLt4XL_LI7weUT2D1TCoWxpJrmKbhchlHZTbcS7qy_pGT-WR6nrkZzfCdTSUMnF4bADmMGqu-4NH5DmxINH2eVlEkap3Zci0JPRosGSEkowS6J_7fIYpCu3CrUMORxOe1_NprPcdFRc6FUZH2heJFamp-ym1wPzO4Hm5DykLK7Mm3oUr1E3zH_ylgoPOTDF2v5_0vsAWYtZkZScp1A00cYIv8p1f4QyckgSj4NShN1O9wR_ZLA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<a class="font-title-md text-body-md text-on-surface hover:text-primary font-semibold truncate transition-colors" href="#">
+                    ثريا «دَواحة» المعلقة العضوية
+                  </a>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">الإضاءة والثريات</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#9d6a2c]"></span> خيزران + كتان عاجي
+                    </span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 font-mono text-label-md text-on-surface-variant">LUM-LT-012</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="relative flex items-center">
+<input class="w-28 bg-surface-container-low focus:bg-surface-container-lowest px-2.5 py-1.5 pl-8 rounded-lg font-title-md text-body-md text-primary font-semibold focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" onchange="markEdited(this)" type="text" value="3,850"/>
+<span class="absolute left-2.5 font-label-sm text-label-sm text-on-surface-variant pointer-events-none">ج.م</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> سعر مقترح من الحاسبة
+                </span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold">1,980 ج.م</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">هامش: 48.5%</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<input class="w-14 bg-surface-container-low px-2 py-0.5 rounded font-title-md text-body-sm text-on-surface text-center focus:outline-none focus:ring-1 focus:ring-primary" onchange="markEdited(this)" type="number" value="4"/>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">مخزون محدود</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">يُصنع بالطلب: 5-7 أيام</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex flex-col items-center">
+<span class="font-title-md text-body-md font-semibold">89</span>
+<div class="flex items-center text-tertiary text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Product 3: Clay Lamp (Salsal) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-4 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container-high shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Hand-thrown terracotta ceramic table lamp with soft textural unglazed finish and linen diffuser, studio luxury still life, warm Mediterranean aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-QTs-UIcnWYuyMZ2PIlr1-PmBb1Fx6_Hq8BI3Em4IYdk_ygpCKM2Y4sY130eXyXNQxbrDgzi-MtG58SUIW8BGsdvR9p2RwzSxrXpos79x-Y2QD2QpN7FZZ09vOh12vpeN-w7johIfyREzroKy9S8_cJkcurglzEGdSw5wgyoWaJWM_9iOTYSk03liFUAwcX7t1lIL9y08n5GJ2HvDZVX5Jn5vQ7DIwm_TX2PBfZzKJGOzzTmikSGx3w"/>
+</div>
+<div class="flex flex-col min-w-0">
+<a class="font-title-md text-body-md text-on-surface hover:text-primary font-semibold truncate transition-colors" href="#">
+                    مصباح «صلصال» الفخاري المكتبي
+                  </a>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">الإضاءة والثريات</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#815215]"></span> طين قنائي محروق
+                    </span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 font-mono text-label-md text-on-surface-variant">LUM-LT-031</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="relative flex items-center">
+<input class="w-28 bg-surface-container-low focus:bg-surface-container-lowest px-2.5 py-1.5 pl-8 rounded-lg font-title-md text-body-md text-on-surface font-semibold focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" onchange="markEdited(this)" type="text" value="1,600"/>
+<span class="absolute left-2.5 font-label-sm text-label-sm text-on-surface-variant pointer-events-none">ج.م</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">سعر ثابت</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold">920 ج.م</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">هامش: 42.5%</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<input class="w-14 bg-surface-container-low px-2 py-0.5 rounded font-title-md text-body-sm text-on-surface text-center focus:outline-none focus:ring-1 focus:ring-primary" onchange="markEdited(this)" type="number" value="18"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">جاهز للشحن</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">تسليم خلال 48 ساعة</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex flex-col items-center">
+<span class="font-title-md text-body-md font-semibold">210</span>
+<div class="flex items-center text-tertiary text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Product 4: Handwoven Throw (Al Waha) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-4 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container-high shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Traditional handmade fringed loom woven bed throw blanket draped casually on neutral upholstered armchair, warm earthy palette with raw flax fibers, high-end editorial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeDKHJsnYo0jhFlS9O36V2dVdzpRwV921gCOFJxevPJEHXtoT8uEDb0sVqfgzZ22JXpPZlHssju3Xch2CmJNXspCpiVq4lkXXaNiVt50vtlx6m1aqEEEUMmxZV1j6Zp6T9o7ilUOuJMVsHsdLfIln77t98Hqx6fmGVp91yn7f9uIRmC2ckdHJDowIr5rdx-jc1OlDZEST-mOCiRXIYnIjGTC57eqck_-Lt53izEG_zO5zFbL4xTvvv6A"/>
+</div>
+<div class="flex flex-col min-w-0">
+<a class="font-title-md text-body-md text-on-surface hover:text-primary font-semibold truncate transition-colors" href="#">
+                    شال «الواحة» المهدب نول يدوي
+                  </a>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">مفروشات وأسرّة</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#58624b]"></span> صوف أخميم ونول يدوي
+                    </span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 font-mono text-label-md text-on-surface-variant">LUM-TX-089</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="relative flex items-center">
+<input class="w-28 bg-surface-container-low focus:bg-surface-container-lowest px-2.5 py-1.5 pl-8 rounded-lg font-title-md text-body-md text-on-surface font-semibold focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" onchange="markEdited(this)" type="text" value="2,400"/>
+<span class="absolute left-2.5 font-label-sm text-label-sm text-on-surface-variant pointer-events-none">ج.م</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="line-through text-on-surface-variant font-label-sm text-label-sm">2,650 ج.م</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/40 px-1.5 py-0.2 rounded font-semibold">-9%</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold">1,350 ج.م</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">هامش: 43.7%</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<input class="w-14 bg-error-container text-on-error-container px-2 py-0.5 rounded font-title-md text-body-sm text-center focus:outline-none" onchange="markEdited(this)" type="number" value="0"/>
+<span class="font-label-sm text-label-sm text-error font-semibold">نفد المخزون</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">يُصنع بالطلب: 6 أيام</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex flex-col items-center">
+<span class="font-title-md text-body-md font-semibold">64</span>
+<div class="flex items-center text-tertiary text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.7</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Product 5: Turned Beech Lamp (Sukoon) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-4 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container-high shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Turned solid natural beech wood base desk lamp with off-white cylinder fabric shade, serene natural sunlight, organic architectural object aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOYGvsKaU3TjBk-aIFiQxdkibehbSBu1xxx-m18QgrxV0CcYYTIUpL5qX6MkpVtSuiaRRpZkz6ID7agAJ4O6DDi3u2vy1THpUMqy8AWlQtVQu4bmXmKGcnkpbgmSYSzp5HyzYc1R8IVVBfkLk3tEegRbYC5InXFePMA-FEOll_eroBKgqHz3gHWjng_VEOaSenOtWNH7lpfHmbq6WSjuR7rq9jVdicmG3J3dHgmyXWuPVkDqc2DAKhDw"/>
+</div>
+<div class="flex flex-col min-w-0">
+<a class="font-title-md text-body-md text-on-surface hover:text-primary font-semibold truncate transition-colors" href="#">
+                    أباجورة «سكون» من خشب الزان المخروط
+                  </a>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">الإضاءة والثريات</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#7f522b]"></span> خشب زان مجفف طبيعياً
+                    </span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 font-mono text-label-md text-on-surface-variant">LUM-LT-065</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="relative flex items-center">
+<input class="w-28 bg-surface-container-low focus:bg-surface-container-lowest px-2.5 py-1.5 pl-8 rounded-lg font-title-md text-body-md text-on-surface font-semibold focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" onchange="markEdited(this)" type="text" value="1,950"/>
+<span class="absolute left-2.5 font-label-sm text-label-sm text-on-surface-variant pointer-events-none">ج.م</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">سعر ثابت</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold">1,080 ج.م</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">هامش: 44.6%</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<input class="w-14 bg-surface-container-low px-2 py-0.5 rounded font-title-md text-body-sm text-on-surface text-center focus:outline-none focus:ring-1 focus:ring-primary" onchange="markEdited(this)" type="number" value="7"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">جاهز للشحن</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">مدة التصنيع: 4 أيام</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex flex-col items-center">
+<span class="font-title-md text-body-md font-semibold">97</span>
+<div class="flex items-center text-tertiary text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Product 6: Hand-Embroidered Quilt (Nubia) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-4 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container-high shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Exquisite handmade hand-embroidered artisanal luxury quilt with subtle geometric heritage stitching in beige and terracotta, draped on bed, serene bedroom background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtO7JqxgK6WtwRgRO5qGm2sEY-Veh5z0LqJFNrdoor2N6tp0r0yKzOItXxKrp1WAlzb6VNQMFwZhiq-25LRSr0Fnyn31ZAnwfZjEfGlETdfEXb4YhqN105fa09FB-NJPreGOi7aEjJyWO44f1bDjliSxf0fb31dRRQ70vADFUQnrcLGfH9Z7B8qn2zEbBjZMaWDxxuDaCK8DdFHZaw6z7yRpCaeoMA0MBL7stayDLrvgRCH4sbwqDomw"/>
+</div>
+<div class="flex flex-col min-w-0">
+<a class="font-title-md text-body-md text-on-surface hover:text-primary font-semibold truncate transition-colors" href="#">
+                    لحاف «نوبيا» بالتطريز اليدوي الدقيق
+                  </a>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">قطع مخصصة وفندقية</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#663d18]"></span> قطن مصري طويل التيلة
+                    </span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 font-mono text-label-md text-on-surface-variant">LUM-BD-104</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="relative flex items-center">
+<input class="w-28 bg-surface-container-low focus:bg-surface-container-lowest px-2.5 py-1.5 pl-8 rounded-lg font-title-md text-body-md text-on-surface font-semibold focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" onchange="markEdited(this)" type="text" value="6,200"/>
+<span class="absolute left-2.5 font-label-sm text-label-sm text-on-surface-variant pointer-events-none">ج.م</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> قطعة نادرة مصنعة يدوياً
+                </span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold">3,200 ج.م</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">هامش: 48.4%</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+<input class="w-14 bg-surface-container-low px-2 py-0.5 rounded font-title-md text-body-sm text-on-surface text-center focus:outline-none focus:ring-1 focus:ring-primary" onchange="markEdited(this)" type="number" value="2"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">يُصنع عند الطلب</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">مدة التطريز: 10 أيام</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex flex-col items-center">
+<span class="font-title-md text-body-md font-semibold">38</span>
+<div class="flex items-center text-tertiary text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Product 7: Olive Linen Cover (Zaytouna) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-4 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-lg overflow-hidden bg-surface-container-high shrink-0 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Olive green natural woven flax duvet bed cover with subtle crinkles on natural wood platform bed, morning light through linen curtain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3FLfncAOWBO-hwMQFEfrNx4QtqFfGmHNHNDizacjiFev9dTXgvHmt7CfqKSF1tyEGdbR8wS3Pe8FjJOt_uQoX_eXcee0B7sud7fGTo-OXct425uEouHdIDT9zxaUHKZdeuefncppk-A9w4S47AO3O0T_DE9xP0bY1_ENuXVvrOW4urp1NHJswJeWTFTfhyYyBxiLRkLDpXxzQd1sCSp40uF9739MalA1bT-SjS8DbnhCJvlrP1pWHgA"/>
+</div>
+<div class="flex flex-col min-w-0">
+<a class="font-title-md text-body-md text-on-surface hover:text-primary font-semibold truncate transition-colors" href="#">
+                    غطاء سرير «زيتونة» الكتان المغسول
+                  </a>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">مفروشات وأسرّة</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#5c664f]"></span> صبغة نباتية مستدامة
+                    </span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 font-mono text-label-md text-on-surface-variant">LUM-BD-052</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="relative flex items-center">
+<input class="w-28 bg-surface-container-low focus:bg-surface-container-lowest px-2.5 py-1.5 pl-8 rounded-lg font-title-md text-body-md text-on-surface font-semibold focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" onchange="markEdited(this)" type="text" value="5,400"/>
+<span class="absolute left-2.5 font-label-sm text-label-sm text-on-surface-variant pointer-events-none">ج.م</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">سعر ثابت</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold">2,950 ج.م</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">هامش: 45.3%</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<input class="w-14 bg-surface-container-low px-2 py-0.5 rounded font-title-md text-body-sm text-on-surface text-center focus:outline-none focus:ring-1 focus:ring-primary" onchange="markEdited(this)" type="number" value="5"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">جاهز للشحن</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">مدة التصنيع: 4 أيام</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex flex-col items-center">
+<span class="font-title-md text-body-md font-semibold">53</span>
+<div class="flex items-center text-tertiary text-label-sm">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-error hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Selection Summary -->
+<div class="p-4 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-3">
+<span>إظهار <strong>7</strong> من أصل <strong>42</strong> قطعة حرفية</span>
+<span class="text-surface-container-highest">|</span>
+<span class="text-primary font-medium">محددة: 0 قطعة</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-title-md text-body-sm disabled:opacity-40" disabled="">السابق</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-title-md text-body-sm">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-title-md text-body-sm hover:bg-surface-container-high transition-colors">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-title-md text-body-sm hover:bg-surface-container-high transition-colors">3</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-title-md text-body-sm hover:bg-surface-container-high transition-colors">التالي</button>
+</div>
+</div>
+</div>
+<!-- Bottom Helper: Quick FAQ for the Store Admin on Pricing -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center gap-2.5 text-primary">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+<h3 class="font-title-md text-title-md font-bold">كيف يعمل الحفظ الفوري؟</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        أي تعديل في خانة السعر أو المخزون يتم تمييزه بلون داكن ويظهر بشريط التنبيه. بمجرد الضغط على «حفظ التعديلات»، يتم تحديث صفحات المنتجات الحية أمام المتسوقين في المتجر فوراً.
+      </p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center gap-2.5 text-secondary">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+<h3 class="font-title-md text-title-md font-bold">حماية هامش الورشة</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        يحسب النظام تلقائياً نسبة ربحك الصافية بناءً على تكلفة خامات النول والأخشاب وساعات العمل اليدوية، ويحذرك إذا انخفض الهامش عن 35%.
+      </p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center gap-2.5 text-tertiary">
+<span class="material-symbols-outlined text-[22px]">auto_fix_high</span>
+<h3 class="font-title-md text-title-md font-bold">التعديل الجماعي الذكي</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        يمكنك زيادة أو خفض أسعار تصنيف محدد (مثلاً كافة ثريات الخيزران بنسبة 10%) بنقرة واحدة عند ارتفاع أسعار الخامات في السوق.
+      </p>
+</div>
+</div>
+<!-- Bulk Edit Modal Dialog (Hidden by Default) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm" id="bulk-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-6 shadow-2xl flex flex-col gap-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">percent</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">التعديل الجماعي لأسعار المنتجات</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="toggleBulkModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        اختر الفئة المستهدفة ونوع التعديل لتطبيق السعر الجديد على جميع القطع المحددة في خطوة واحدة.
+      </p>
+<div class="flex flex-col gap-3.5">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">الفئة المستهدفة</label>
+<select class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none">
+<option>كافة منتجات الإضاءة والثريات (18 قطعة)</option>
+<option>كافة المفروشات والأسرّة الكتان (16 قطعة)</option>
+<option>القطع المحددة فقط في الجدول (0)</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">طريقة التعديل</label>
+<select class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none">
+<option>زيادة بنسبة مئوية (%)</option>
+<option>تخفيض بنسبة مئوية (%)</option>
+<option>زيادة بمبلغ محدد (ج.م)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">القيمة</label>
+<input class="w-full bg-surface-container-low px-3 py-2 rounded-lg font-title-md text-body-md text-on-surface focus:outline-none" type="number" value="10"/>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">info</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">
+            سيتم تحديث أسعار البيع فوراً ووضع الأسعار السابقة كـ (سعر قبل الخصم) إذا تم اختيار التخفيض، لزيادة معدل تحويل المبيعات.
+          </p>
+</div>
+</div>
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-4 py-2 rounded-xl text-on-surface-variant hover:bg-surface-container font-title-md text-body-sm transition-colors" onclick="toggleBulkModal()">
+          إلغاء
+        </button>
+<button class="px-5 py-2.5 rounded-xl bg-primary text-on-primary font-title-md text-body-sm hover:bg-primary-container transition-all shadow-md" onclick="applyBulkEdit()">
+          تطبيق التعديلات الآن
+        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Interactive Script for Instant Feedback -->
+<script>
+  let editedFieldsCount = 2;
+
+  function markEdited(inputElement) {
+    inputElement.classList.add('bg-tertiary-fixed/30', 'text-on-tertiary-fixed-variant', 'font-bold');
+    editedFieldsCount++;
+    const countEl = document.getElementById('edited-count');
+    if (countEl) countEl.innerText = editedFieldsCount;
+    const banner = document.getElementById('unsaved-banner');
+    if (banner) banner.classList.remove('hidden');
+  }
+
+  function saveAllChanges() {
+    const banner = document.getElementById('unsaved-banner');
+    if (banner) {
+      banner.innerHTML = `
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-secondary text-[22px]">check_circle</span>
+          <span class="font-title-md text-body-sm">تم حفظ ونشر وتحديث كافة الأسعار الحية في المتجر بنجاح!</span>
+        </div>
+      `;
+      setTimeout(() => {
+        banner.classList.add('hidden');
+        document.querySelectorAll('.bg-tertiary-fixed\\/30').forEach(el => {
+          el.classList.remove('bg-tertiary-fixed/30', 'text-on-tertiary-fixed-variant');
+        });
+      }, 2500);
+    }
+  }
+
+  function discardChanges() {
+    window.location.reload();
+  }
+
+  function toggleBulkModal() {
+    const modal = document.getElementById('bulk-modal');
+    if (modal) modal.classList.toggle('hidden');
+  }
+
+  function applyBulkEdit() {
+    toggleBulkModal();
+    const banner = document.getElementById('unsaved-banner');
+    if (banner) {
+      banner.classList.remove('hidden');
+      document.getElementById('edited-count').innerText = "18";
+    }
+  }
+
+  function applySuggestedPrice() {
+    const matCost = parseFloat(document.getElementById('calc-material').value) || 0;
+    const hours = parseFloat(document.getElementById('calc-hours').value) || 0;
+    const margin = parseFloat(document.getElementById('calc-margin').value) || 0.45;
+    const totalCost = matCost + (hours * 120);
+    const retail = Math.round(totalCost / (1 - margin));
+    
+    document.getElementById('calc-result').innerText = retail.toLocaleString('ar-EG') + ' ج.م';
+    alert('تم احتساب السعر المقترح (' + retail + ' ج.م). يمكنك نسخه وتطبيقه على القطعة المختارة.');
+  }
+</script></main></div></body></html>

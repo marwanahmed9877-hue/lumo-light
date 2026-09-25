@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>LUMO | إضاءة ومفروشات مصنوعة يدوياً</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;scroll-behavior:smooth;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}
+::-webkit-scrollbar{display:none;}
+
+/* Luxury Fluid Micro-Interactions & Ambient Glow Styles */
+@keyframes ambientGlow {
+  0%, 100% {
+    opacity: 0.38;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08) translate3d(-10px, -6px, 0);
+  }
+}
+
+@keyframes warmBreathe {
+  0%, 100% {
+    box-shadow: 0 0 45px 10px rgba(246, 186, 139, 0.22);
+  }
+  50% {
+    box-shadow: 0 0 85px 25px rgba(246, 186, 139, 0.42);
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.18); filter: brightness(1.25); }
+}
+
+.ambient-warm-glow {
+  animation: ambientGlow 7s ease-in-out infinite;
+}
+
+.hero-light-breathe {
+  animation: warmBreathe 8s ease-in-out infinite;
+}
+
+/* Luxury Card Transitions & Ambient Shadows */
+.luxury-card-hover {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.45s ease;
+}
+.luxury-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -8px rgba(127, 82, 43, 0.12), 0 10px 18px -6px rgba(47, 21, 0, 0.06);
+}
+
+/* Button Subtle Sheen & Feedback */
+.btn-luxury {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-luxury::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+  transform: skewX(-20deg);
+  transition: 0.75s ease;
+}
+.btn-luxury:hover::after {
+  left: 150%;
+}
+.btn-luxury:active {
+  transform: scale(0.96);
+}
+
+/* Nav Link Underline Slide */
+.nav-link-hover {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #7f522b;
+  border-radius: 9999px;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link-hover:hover::after, .nav-link-hover[aria-current="page"]::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+/* Wishlist Icon Button Micro-bounce */
+.wishlist-btn {
+  transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.wishlist-btn:hover {
+  transform: scale(1.15);
+  color: #ba1a1a;
+  box-shadow: 0 4px 12px rgba(186, 26, 26, 0.18);
+}
+.wishlist-btn:active {
+  transform: scale(0.9);
+}
+
+/* Quick Add Button Feedback */
+.quick-add-btn {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.quick-add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -2px rgba(127, 82, 43, 0.3);
+}
+.quick-add-btn:active {
+  transform: scale(0.94);
+}
+
+/* Review Star Twinkle on Card Hover */
+.review-card:hover .star-icon {
+  animation: starTwinkle 0.8s ease-in-out infinite alternate;
+}
+.review-card:hover .star-icon:nth-child(2) { animation-delay: 0.15s; }
+.review-card:hover .star-icon:nth-child(3) { animation-delay: 0.3s; }
+.review-card:hover .star-icon:nth-child(4) { animation-delay: 0.45s; }
+.review-card:hover .star-icon:nth-child(5) { animation-delay: 0.6s; }
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#31312d","surface":"#fcf9f3","on-background":"#1c1c18","surface-dim":"#dcdad4","surface-container":"#f0eee8","secondary-container":"#d9e4c7","surface-container-lowest":"#ffffff","on-tertiary":"#ffffff","error-container":"#ffdad6","surface-tint":"#82542d","on-surface":"#1c1c18","inverse-primary":"#f6ba8b","tertiary-fixed":"#ffdcbb","outline":"#83746a","on-tertiary-fixed":"#2b1700","error":"#ba1a1a","surface-container-highest":"#e5e2dc","secondary":"#58624b","primary":"#7f522b","on-primary-container":"#fffbff","on-tertiary-container":"#fffbff","primary-container":"#9b6a41","inverse-on-surface":"#f3f0ea","outline-variant":"#d5c3b7","on-tertiary-fixed-variant":"#673d00","primary-fixed":"#ffdcc3","secondary-fixed-dim":"#c0caae","on-error-container":"#93000a","on-primary-fixed":"#2f1500","primary-fixed-dim":"#f6ba8b","on-primary":"#ffffff","tertiary-container":"#9d6a2c","tertiary-fixed-dim":"#faba75","on-error":"#ffffff","on-secondary-fixed":"#161e0c","surface-container-high":"#ebe8e2","on-secondary-container":"#5c664f","background":"#fcf9f3","surface-bright":"#fcf9f3","on-secondary":"#ffffff","on-primary-fixed-variant":"#663d18","surface-container-low":"#f6f3ed","tertiary":"#815215","secondary-fixed":"#dce6c9","on-surface-variant":"#51443b","on-secondary-fixed-variant":"#404a34","surface-variant":"#e5e2dc"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"gutter-mobile":"1rem","space-xl":"3rem","gutter":"1.5rem","space-lg":"1.75rem","space-sm":"0.5rem","space-xs":"0.25rem","margin-mobile":"1.25rem","space-md":"1rem","margin":"3rem"},fontFamily:{"title-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"title-lg":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"display-lg-mobile":["Playfair Display"],"label-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"display-lg":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"label-md":["Plus Jakarta Sans"]},fontSize:{"title-md":["16px",{lineHeight:"24px",letterSpacing:"0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}],"headline-lg":["36px",{lineHeight:"46px",letterSpacing:"-0.01em",fontWeight:"600"}],"title-lg":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"500"}],"display-lg-mobile":["38px",{lineHeight:"48px",letterSpacing:"-0.01em",fontWeight:"500"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"500"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"display-lg":["56px",{lineHeight:"68px",letterSpacing:"-0.02em",fontWeight:"500"}],"headline-lg-mobile":["28px",{lineHeight:"36px",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.08em",fontWeight:"600"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] transition-all duration-300"><div class="bg-surface-container-high text-on-surface-variant text-center py-2 px-gutter text-label-sm tracking-wide"><p>شحن مجاني للطلبات فوق 1,000 ج.م | قطع فنية تُصنع يدوياً بحب وعناية</p></div><div class="h-20 w-full px-margin flex items-center justify-between gap-6"><div class="flex items-center gap-8"><a class="flex items-center gap-3 group transition-transform duration-300 hover:scale-[1.02]" href="#"><span class="font-headline-md text-headline-md tracking-tight text-primary transition-colors duration-300 group-hover:text-primary-container">LUMO</span><span class="font-label-sm text-label-sm text-outline tracking-widest hidden sm:inline-block border-s border-outline-variant ps-3 transition-colors duration-300 group-hover:text-on-surface">لوكس وحِرفية يدوية</span></a></div><nav class="hidden lg:flex items-center gap-7" data-active-classes="text-primary font-title-md"><a aria-current="page" class="nav-link-hover text-primary font-title-md py-1" data-path="home" href="#">الرئيسية</a><a class="nav-link-hover font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" data-path="chandeliers-catalog" href="#">النجف والثريات</a><a class="nav-link-hover font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" data-path="table-lamps-catalog" href="#">أباجورات طاولة</a><a class="nav-link-hover font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" data-path="bedding-textiles-catalog" href="#">مفروشات وأغطية السراير</a><a class="nav-link-hover font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" data-path="artisan-story" href="#">حكايتنا والحرفيين</a><a class="nav-link-hover font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" data-path="contact-concierge" href="#">تواصل معنا</a></nav><div class="flex items-center gap-4 text-on-surface-variant"><button aria-label="البحث" class="p-2 rounded-full hover:bg-surface-container hover:text-on-surface transition-all duration-300 active:scale-90 flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="المفضلة" class="p-2 rounded-full hover:bg-surface-container hover:text-on-surface transition-all duration-300 active:scale-90 flex items-center justify-center relative group" type="button"><span class="material-symbols-outlined text-[22px] group-hover:text-error transition-colors">favorite</span></button><a aria-label="سلة المشتريات" class="p-2 rounded-full hover:bg-surface-container hover:text-on-surface transition-all duration-300 active:scale-90 flex items-center justify-center relative group" data-path="cart-and-checkout" href="#"><span class="material-symbols-outlined text-[22px] group-hover:scale-110 transition-transform">shopping_bag</span><span class="absolute 0 top-1 -end-1 bg-primary text-on-primary font-label-sm text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold shadow-sm transition-transform group-hover:scale-110">2</span></a><div class="h-5 w-px bg-outline-variant hidden sm:block"></div><span class="text-label-sm font-label-sm text-outline hidden sm:inline-block cursor-pointer hover:text-primary transition-colors">ج.م / EN</span><a class="flex items-center ring-2 ring-transparent hover:ring-primary/40 rounded-full transition-all duration-300 active:scale-95" data-path="account-settings" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover transition-transform duration-300 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1VEByP8qPOLPra0ftH47GJl-qDwU1QZCemcxYVmCGmlOUStmEgRE9VBhL5t_aQJgAsu0riFJSGb01b6ZaQYXW92ta-ypkDMwnPr5EtO-apUtOWCmtkZGSmjYq2jgUuooxPpZlTWxqjQNylgwXZxLOYZP52OZ-dqahJ_qQwPPf4zn15cfSO6ywO355JwDlchbsKDcz2H7Xhaon9Oup0B6rpPzjXvtFoBaz1f4Eznx8irc-_Xt3qJlF7xPAYfSyHTmSTzqSIBQxFZWSM"/></a></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Interactive Ambient Atmosphere Engine (Light Temperature Switcher) -->
+<aside class="sticky top-20 z-40 w-full bg-surface/90 backdrop-blur-md px-margin py-2.5 flex items-center justify-between transition-colors duration-500 shadow-[0_1px_4px_rgba(0,0,0,0.03)]" id="ambient-controller">
+<div class="flex items-center gap-3">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(127,82,43,0.6)]"></span>
+<span class="font-label-md text-label-md text-on-surface">محاكي الإضاءة الطبيعية للمنزل:</span>
+<span class="font-body-sm text-body-sm text-primary font-semibold transition-all duration-300" id="ambient-mode-indicator">دفء المساء (2700K Warm Filament)</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-1 rounded-full text-label-sm font-label-sm bg-primary text-on-primary transition-all duration-300 flex items-center gap-1.5 shadow-sm active:scale-95 hover:shadow-md" id="toggle-ambient-warm" type="button">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">light_mode</span>
+<span>دفء المساء (2700K)</span>
+</button>
+<button class="px-3.5 py-1 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface hover:bg-surface-container-highest transition-all duration-300 flex items-center gap-1.5 active:scale-95" id="toggle-ambient-neutral" type="button">
+<span class="material-symbols-outlined text-[15px]">wb_sunny</span>
+<span>نهار مشمس (4000K)</span>
+</button>
+</div>
+</aside>
+<!-- Hero Masterpiece Section -->
+<section class="relative w-full overflow-hidden bg-surface-container-low pt-space-lg pb-space-xl">
+<!-- Ambient Breathing Filament Glow Halo -->
+<div aria-hidden="true" class="ambient-warm-glow pointer-events-none absolute -top-24 -start-20 w-[580px] h-[580px] rounded-full bg-gradient-to-br from-tertiary-fixed/40 via-primary-fixed-dim/25 to-transparent blur-3xl"></div>
+<div aria-hidden="true" class="ambient-warm-glow pointer-events-none absolute top-1/3 end-0 w-[480px] h-[480px] rounded-full bg-gradient-to-bl from-primary-fixed/30 via-tertiary-fixed-dim/15 to-transparent blur-3xl" style="animation-delay: -3.5s;"></div>
+<div class="w-full px-margin relative z-10">
+<!-- Main Visual Showcase (Direct Inspiration Artifact) -->
+<div class="hero-light-breathe relative w-full rounded-2xl overflow-hidden shadow-xl bg-surface mb-space-lg group transition-all duration-700">
+<img alt="LUMO - Handmade lighting and artisan bedding textiles display" class="w-full h-[380px] lg:h-[520px] object-cover object-center transform group-hover:scale-[1.03] transition-transform duration-1000 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0N1AppyVL0LQJPWxwcXdO7WrNSwnyAxhKKfL-gQ-uZV_aRF732toNk_BUY3oYwo_LmU4ZgM7XdpxeiAiq72ihi9Q4S4A8VyDPWluQV5jxm66MDhcO0rIlzd7RHoQwmG1gVu_IYH4L9ZXcfx5C7icf7_XiykpwFeDpm9QC_3hwEor1maExMy6tvI9o4u5Ga6HCXcZP_Jyl4f-Ky_8ZjwtQdBhmjMxf6Xk-O78d2OAuGdiUCrCvF68BWF2Pg-Hot7A4_A4"/>
+<!-- Breathing Radial Glow for Handcrafted Lighting Vibe -->
+<div class="absolute inset-0 bg-radial from-amber-400/10 via-transparent to-transparent pointer-events-none mix-blend-screen opacity-70 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/30 to-transparent flex flex-col justify-end p-gutter lg:p-space-lg text-surface-container-lowest">
+<div class="max-w-3xl space-y-3">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-md text-on-primary font-label-sm text-label-sm shadow-sm transition-transform duration-300 hover:scale-105">
+<span class="material-symbols-outlined text-[14px]">eco</span>
+              مجموعة الموسم: نقاء الكتان وخشب السنديان المصقول
+            </span>
+<h1 class="font-headline-lg text-headline-lg lg:text-display-lg text-surface font-headline-lg leading-tight tracking-tight drop-shadow-sm">
+              دفء الحرفة.. وأناقة التفاصيل التي تنبض بالحياة في منزلك
+            </h1>
+<p class="font-body-lg text-body-lg text-surface-container-high/90 max-w-2xl leading-relaxed">
+              مجموعات حصرية ومصممة يدوياً من النجف الفاخر، أباجورات الإضاءة الدافئة، ومفروشات السراير المصنوعة من أجود خيوط الكتان والقطن المصري النقي.
+            </p>
+<div class="flex flex-wrap items-center gap-4 pt-3">
+<a class="btn-luxury bg-primary text-on-primary font-title-md text-title-md px-7 py-3 rounded-lg hover:bg-primary-container transition-all flex items-center gap-2 shadow-md hover:shadow-xl group/btn" href="#collections-overview">
+<span>استكشف تشكيلة الموسم</span>
+<span class="material-symbols-outlined text-lg rtl:rotate-180 transition-transform duration-300 group-hover/btn:-translate-x-1.5">arrow_right_alt</span>
+</a>
+<a class="btn-luxury bg-surface/90 text-on-surface font-title-md text-title-md px-6 py-3 rounded-lg hover:bg-surface hover:text-primary transition-all backdrop-blur-sm shadow-sm hover:shadow-md" href="#custom-atelier">
+                طلب تصميم مخصص
+              </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Pillars Metric Strip -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm luxury-card-hover flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed/40 text-primary flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-on-primary">
+<span class="material-symbols-outlined text-[26px]">precision_manufacturing</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">صناعة يدوية 100%</h2>
+<p class="font-body-sm text-body-sm text-outline">تشكيل يدوي دقيق لكل قطعة</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm luxury-card-hover flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:bg-secondary group-hover:text-on-secondary">
+<span class="material-symbols-outlined text-[26px]">nest_eco_leaf</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface group-hover:text-secondary transition-colors">مواد عضوية مستدامة</h2>
+<p class="font-body-sm text-body-sm text-outline">كتان نقي وأخشاب طبيعية</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm luxury-card-hover flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed/50 text-tertiary flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:bg-tertiary group-hover:text-on-tertiary">
+<span class="material-symbols-outlined text-[26px]">fingerprint</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface group-hover:text-tertiary transition-colors">تصاميم فريدة لا تتكرر</h2>
+<p class="font-body-sm text-body-sm text-outline">شهادة أصالة ورقم تسلسلي</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm luxury-card-hover flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:bg-primary-container group-hover:text-on-primary">
+<span class="material-symbols-outlined text-[26px]">local_shipping</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">شحن فاخر ومحمي</h2>
+<p class="font-body-sm text-body-sm text-outline">تغليف آمن لباب منزلك</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Collections Gallery -->
+<section class="w-full py-space-xl bg-surface" id="collections-overview">
+<div class="w-full px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-space-lg">
+<div>
+<span class="font-label-md text-label-md text-primary tracking-widest block mb-1">الأقسام الحصرية</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">مجموعات LUMO المصممة بشغف</h2>
+</div>
+<p class="font-body-md text-body-md text-outline max-w-md">
+          ثلاث ركائز تُشكل هوية LUMO الفريدة، حيث تتكامل الإضاءة المعمارية مع نعومة الأقمشة الفاخرة.
+        </p>
+</div>
+<!-- Curated Bento Grid for Collections -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Chandelier Master Card (4 Cols) -->
+<article class="lg:col-span-4 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm luxury-card-hover flex flex-col group border border-transparent hover:border-primary-fixed transition-all duration-500">
+<div class="relative h-80 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Luxurious organic linen pendant chandelier with unlacquered brass suspension chains hanging in a warm sunlit high-ceiling living space, beige walls, soft focus aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD-A5LB45KCHkICafROqrZryCWbMKhZsZkuRc-gZkp5amjQcT2IWj0jDJ9CWn-1VmoJvSL3dQMIuHILWTsXYqKp7Bvr85bPQEyy5bxBfpvdDWgXAaGC0O4R8W2K9lzw7DER8_PvBMAQqJnT8aEStAppFb6nZDA5K5nrxJ76NGDJ8WsSzE9fikuDZedZ4d7D0t_6jNqJStR8ybrDgajI8jFWjJXFX6EskpwNP_XsGXmIv_Ye4uQtcmRbg"/>
+<div class="absolute top-4 start-4 bg-primary text-on-primary px-3 py-1 rounded-full font-label-sm text-label-sm shadow-sm transition-transform duration-300 group-hover:scale-105">
+              إصدارات محدودة
+            </div>
+<div class="absolute bottom-4 end-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-lg text-label-sm font-label-sm text-on-surface shadow-sm">
+              تبدأ من 3,800 ج.م
+            </div>
+</div>
+<div class="p-gutter flex flex-col flex-1 justify-between space-y-4">
+<div>
+<div class="flex items-center gap-2 mb-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary">نحاس وخيش وكتان هاند ميد</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors duration-300">
+                النجف والثريات المعلقة
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                وحدات إضاءة سقفية تفيض بالأناقة، تعتمد على خامات طبيعية تكسر وهج النور لتنشره بطريقة درامية هادئة.
+              </p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-title-md text-title-md hover:gap-3.5 transition-all duration-300 pt-2 group/link" href="#">
+<span>تصفح قطع النجف الفاخر</span>
+<span class="material-symbols-outlined text-sm rtl:rotate-180 transition-transform duration-300 group-hover/link:-translate-x-1">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Table Lamps Card (4 Cols) -->
+<article class="lg:col-span-4 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm luxury-card-hover flex flex-col group border border-transparent hover:border-primary-fixed transition-all duration-500">
+<div class="relative h-80 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Artisanal bedside table lamp with turned solid oak timber base, hand-stitched natural flax linen lampshade glowing warmly with a 2700k filament light, serene bedroom corner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMvz-uPtsKPKkBfj9RL7sxRTBqPWXaB-WVg3-FUH_jJIhF8gmomX-LbyxijH-iwJYMcKiNR-alg5t0g9o_1OnOyOCBsQUOUL0U6NzihV272xGRQoWTO_OUgSh78HtPxvoN2UCr3FnAdHbf9uHTmqv2kj2LHpxq9JIR1L324ABVw4pO4is0tIdKXuYmYiAJEwvzwim51m0WuTHuUluJSv-rSMmcghoCIr-zQFodIaP987nQINC2ZV9ahw"/>
+<div class="absolute top-4 start-4 bg-secondary text-on-secondary px-3 py-1 rounded-full font-label-sm text-label-sm shadow-sm transition-transform duration-300 group-hover:scale-105">
+              الأكثر طلباً
+            </div>
+<div class="absolute bottom-4 end-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-lg text-label-sm font-label-sm text-on-surface shadow-sm">
+              تبدأ من 1,150 ج.م
+            </div>
+</div>
+<div class="p-gutter flex flex-col flex-1 justify-between space-y-4">
+<div>
+<div class="flex items-center gap-2 mb-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-primary">خزف يدوي وخشب طبيعي مصقول</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors duration-300">
+                أباجورات الطاولة الدافئة
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                مصبوبة ومشكّلة باليد على عجلة الفخار ومخارط الخشب العتيقة لتمنح مكتبتك أو طاولة سريرك روحاً تنبض بالسكينة.
+              </p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-title-md text-title-md hover:gap-3.5 transition-all duration-300 pt-2 group/link" href="#">
+<span>تصفح أباجورات الطاولة</span>
+<span class="material-symbols-outlined text-sm rtl:rotate-180 transition-transform duration-300 group-hover/link:-translate-x-1">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Bedding & Throws (4 Cols) -->
+<article class="lg:col-span-4 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm luxury-card-hover flex flex-col group border border-transparent hover:border-primary-fixed transition-all duration-500">
+<div class="relative h-80 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Folded stack of organic washed linen duvets, patterned handwoven boho throw blankets, fringed neutral bedspreads on a minimalist platform bed, warm beige daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGrmiXkJs89aYzRS7bFxmKTBSwhV0XEYXvQvnneQxh-UhdY1OIvGG7iIzqQ_u1VtunSieKUv1zTbDTpEwi9Pied7KIVXk3DnRm_PItU8wLseGwwCBEA7ayquSqZ9_dFtixU5JQMWqVi_jcjMLRhaLg_2qCZKdy62n7ajcPTQT8CofnUFxIX8XsRB9uoVG4IbBavFsxd9elMb7bFlTe7YlWNsckv9jncw5SLj1HTR6cMc6EH8pGvwSJdQ"/>
+<div class="absolute top-4 start-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-full font-label-sm text-label-sm shadow-sm transition-transform duration-300 group-hover:scale-105">
+              خامات نقية 100%
+            </div>
+<div class="absolute bottom-4 end-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-lg text-label-sm font-label-sm text-on-surface shadow-sm">
+              تبدأ من 1,800 ج.م
+            </div>
+</div>
+<div class="p-gutter flex flex-col flex-1 justify-between space-y-4">
+<div>
+<div class="flex items-center gap-2 mb-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary">قطن مصري ممشوق وكتان مغسول</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors duration-300">
+                مفروشات السراير والبطانيات
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                منسوجات غنية بالملمس الطبيعي تنقلك لتجربة نوم فندقية فائقة النعومة مع غرز تطريز يدوي مستوحاة من التراث.
+              </p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-title-md text-title-md hover:gap-3.5 transition-all duration-300 pt-2 group/link" href="#">
+<span>استكشف تشكيلة المفروشات</span>
+<span class="material-symbols-outlined text-sm rtl:rotate-180 transition-transform duration-300 group-hover/link:-translate-x-1">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Best Sellers Signature Products Grid -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="w-full px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-space-lg">
+<div>
+<span class="font-label-md text-label-md text-primary tracking-widest block mb-1">القطع الأيقونية</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">مختارات LUMO الأكثر اقتناءً</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300 active:scale-90 shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg rtl:rotate-180">chevron_right</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all duration-300 active:scale-90 shadow-sm" type="button">
+<span class="material-symbols-outlined text-lg rtl:rotate-180">chevron_left</span>
+</button>
+</div>
+</div>
+<!-- 4 Showcase Products -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm luxury-card-hover flex flex-col group border border-transparent hover:border-primary-fixed/60">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Handcrafted brass chandelier with multiple natural linen fluted shades, warm glowing incandescent bulbs against a cream textured plaster background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmpIDpdMCSXEZuzkLdxZVqdbpZrCv06f5tvsC9HkOphGw9m6uhbC85WosnnpCINEiJKaoXJJ816C1DD-oVm0YVLoXTVKxjZZ-zhLmWvvmlvODhJmK9VxklurqgsCybIK_bUo0cWpTzS07_dFzeTQdqQSEoy2w2gVBAYg2Rk5ftNcGkRxDtDUlWF5Efc0U1AooiGhf6iLCfNH8ZV9nkGZgWpVJtRqiHqTdrHFEDkjj2SHHYNB76tmdwww"/>
+<button aria-label="أضف للمفضلة" class="wishlist-btn absolute top-3 end-3 w-8 h-8 rounded-full bg-surface/85 backdrop-blur-sm text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 start-3">
+<span class="bg-secondary-container/90 text-on-secondary-container font-label-sm text-[11px] px-2.5 py-0.5 rounded-full shadow-xs">نحاس مطروق يدوياً</span>
+</div>
+</div>
+<div class="space-y-2 flex-1 flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline">نجف أسقف فاخر</span>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">ثريا "أصيل" النحاسية المشغولة يدوياً</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-1">تنسيق ثنائي لغرف المعيشة وطاولات السفرة</p>
+</div>
+<div class="pt-3 flex items-center justify-between">
+<div>
+<span class="font-title-lg text-title-lg text-primary font-bold">4,850</span>
+<span class="font-label-sm text-label-sm text-outline">ج.م</span>
+</div>
+<button class="quick-add-btn px-3.5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-primary hover:text-on-primary flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>إضافة</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm luxury-card-hover flex flex-col group border border-transparent hover:border-primary-fixed/60">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Handcrafted solid turned oak table lamp with an exquisite custom botanical pattern embroidered linen shade, radiating soft amber illumination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBGTi5g_WSuOepFJsKINjN3VkhwIcNK5QYa4Ko9zSQmI-mkq52TEVOw1ObR79phJmyEcaClKJ5FSFfEVBL08JuxIBZDAisIbfowno5Jsj-vkQaq7UBmOoJTFlwqzKfcEo45f96ouFeelk2ik8cdyuxsGl_60m9qmvSzywKNGrEOgnBzWynIt9qN2I2vrOQ065KODvOpTY6Y7G1GVXm_TFryZriITABaCFLIqLE8TRqLRC1nd5ZAbAS6Q"/>
+<button aria-label="أضف للمفضلة" class="wishlist-btn absolute top-3 end-3 w-8 h-8 rounded-full bg-surface/85 backdrop-blur-sm text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 start-3">
+<span class="bg-primary-fixed/90 text-on-primary-fixed font-label-sm text-[11px] px-2.5 py-0.5 rounded-full shadow-xs">سنديان صلب</span>
+</div>
+</div>
+<div class="space-y-2 flex-1 flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline">أباجورات مكتب وطاولة</span>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">أباجورة "طيبة" بغطاء كتان مطرز</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-1">تطريز يدوي مستوحى من واحات النخيل</p>
+</div>
+<div class="pt-3 flex items-center justify-between">
+<div>
+<span class="font-title-lg text-title-lg text-primary font-bold">1,450</span>
+<span class="font-label-sm text-label-sm text-outline">ج.م</span>
+</div>
+<button class="quick-add-btn px-3.5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-primary hover:text-on-primary flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>إضافة</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm luxury-card-hover flex flex-col group border border-transparent hover:border-primary-fixed/60">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Neatly arranged organic washed linen duvet set in natural beige and soft ochre hues, paired with fringed ethnic cushions, inviting textured luxury bedroom style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5b21vsL13v21LBU2H8EJCGPt_hKj9HO7UV4lvyavY3G_jCL7BGOG4sWHJzhuObCVQ2RydOsxBNjEpnAmRZ4YBTcJHnoQNK8eZiQniYE9aPQ_hZivj4Vq-E3wlFUiXMzvf5-khVRqwJ139U_jcMXyULpbect1L7EOMxsowXQsnCqw6UR7dhJ6NNV7eL4Zajc4izx5IgaylxrO7-X7W85lyndOK0E60hFQRKKu1unQpsaEj4rlRTkgOcA"/>
+<button aria-label="أضف للمفضلة" class="wishlist-btn absolute top-3 end-3 w-8 h-8 rounded-full bg-surface/85 backdrop-blur-sm text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 start-3">
+<span class="bg-secondary-container/90 text-on-secondary-container font-label-sm text-[11px] px-2.5 py-0.5 rounded-full shadow-xs">كتان نقي مغسول</span>
+</div>
+</div>
+<div class="space-y-2 flex-1 flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline">مفروشات سرير كاملة</span>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">طقم مفرش "واحة" مع وسائد ديكور</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-1">يشمل غطاء لحاف و4 أكياس مخدات فاخرة</p>
+</div>
+<div class="pt-3 flex items-center justify-between">
+<div>
+<span class="font-title-lg text-title-lg text-primary font-bold">3,200</span>
+<span class="font-label-sm text-label-sm text-outline">ج.م</span>
+</div>
+<button class="quick-add-btn px-3.5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-primary hover:text-on-primary flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>إضافة</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm luxury-card-hover flex flex-col group border border-transparent hover:border-primary-fixed/60">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Hand-turned terracotta clay bedside lamp with raw textured ceramic finish, cream fabric drum shade shedding a gentle cozy glow on a wooden bedside nightstand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSbSeNA6fKOqYeZQV0WNo2zays47wYEZSMZmmULmlrcOJe82rdLEWGEB9xjMchKelkpvGlYYimc-vdzCnYUnmNgxbU6O78WBnL8FHjvw4jHJIWLo_kTevA0XwNzWh-MAQeJBVssu7E1w1CaWyi5tOec4uR5bY9fu_hgfqgDtWfi7xr3rpalM2p6Y7_YKzPSMuNur_lQ9DgrxVRZS2HLgZzYJAF16XJIKNkXcK79RcpY0FmPMX9JdaIqg"/>
+<button aria-label="أضف للمفضلة" class="wishlist-btn absolute top-3 end-3 w-8 h-8 rounded-full bg-surface/85 backdrop-blur-sm text-on-surface flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+<div class="absolute bottom-3 start-3">
+<span class="bg-tertiary-fixed/90 text-on-tertiary-fixed font-label-sm text-[11px] px-2.5 py-0.5 rounded-full shadow-xs">فخار يدوي غير لامع</span>
+</div>
+</div>
+<div class="space-y-2 flex-1 flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-outline">أباجورات خزفية</span>
+<h3 class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">أباجورة سيراميك فخارية "أورورا"</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-1">ملمس طيني خام مع قاعدة متوازنة ومستقرة</p>
+</div>
+<div class="pt-3 flex items-center justify-between">
+<div>
+<span class="font-title-lg text-title-lg text-primary font-bold">1,150</span>
+<span class="font-label-sm text-label-sm text-outline">ج.م</span>
+</div>
+<button class="quick-add-btn px-3.5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-primary hover:text-on-primary flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span>إضافة</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial: The Artisans Behind LUMO & The Loom -->
+<section class="w-full py-space-xl bg-surface">
+<div class="w-full px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Left Story Media Grid (7 Cols) -->
+<div class="lg:col-span-7 grid grid-cols-2 gap-4">
+<div class="space-y-4">
+<div class="rounded-2xl overflow-hidden shadow-md h-64 bg-surface-container group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="An Egyptian artisan woodturner carefully shaping an oak lamp base using chisels on a traditional wood lathe machine, golden wood shavings scattering in warm sunbeams" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALIxfvqWv1eHsHO6Qcw3pF3dUWT2sjpZPap-uSPfxRAFcbVeJx6cHg7NdwafVH7aXNB6wWsbUEyoU5d8oG2j4nm_APuZkPISrsOzhKGUc_DS9Dqa7oNWcULq0rjQRux0ri_A6H6NqGbFcljM40yCPF5AAb-dV8jjRNHcCEibTEecdmaB3sMl0j_oDrFcsDjL_g9tn4FyUvL7EmVvdEz5fNdFX1XktOF8HbFk6JOmdNU1pKglnVzCVSxQ"/>
+</div>
+<div class="bg-surface-container-high p-6 rounded-2xl luxury-card-hover">
+<span class="font-headline-md text-headline-md text-primary font-serif block mb-1">٣٥ سنة</span>
+<p class="font-body-sm text-body-sm text-on-surface">من توارث تقنيات غزل الكتان والخراطة الخشبية الدقيقة بين أجيال الصنّاع في مصر.</p>
+</div>
+</div>
+<div class="space-y-4 pt-8">
+<div class="bg-primary text-on-primary p-6 rounded-2xl shadow-sm luxury-card-hover relative overflow-hidden group">
+<div class="absolute -end-8 -top-8 w-24 h-24 rounded-full bg-white/10 blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-700"></div>
+<span class="material-symbols-outlined text-3xl mb-2">format_quote</span>
+<p class="font-body-md text-body-md leading-relaxed">"الجمال الحقيقي لا يخرج من آلة تصب آلاف النسخ، بل من أيدي تعرف أسرار الخشب ونبض الخيوط."</p>
+<span class="font-label-sm text-label-sm text-primary-fixed mt-3 block">- عم إبراهيم، كبير خراطين استوديو LUMO</span>
+</div>
+<div class="rounded-2xl overflow-hidden shadow-md h-64 bg-surface-container group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Close up of traditional manual textile weaving loom with natural beige unbleached linen threads tightly interlaced, textured aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzTOwiVjMSnDnLCk9JF004WslK0RX7pDVBU7MoKffUQq0yjLox_dNhuF3aIq34bqvVqjJ1LMnkhpXYFo0UGW6Bf0U_CuoaiXKSfJwokB-jEo6ksAdq95Sr4iK6imYDSn4NgjHlEehUZQRIB8rbIAhkxfd-cfZLNkV-ZwbqbuqN6mVc0ae7MlBF3R5QN3phk4YwR5EM8NTgY8D3FNUIyW4tv8TEHwo4ZCGu9kOxbyY1fShzbr1qbaz1ug"/>
+</div>
+</div>
+</div>
+<!-- Right Story Editorial Narrative (5 Cols) -->
+<div class="lg:col-span-5 space-y-5">
+<span class="font-label-md text-label-md text-primary tracking-widest block">فلسفة الحرفة اليدوية</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface leading-tight">
+            نُبطئ إيقاع الحياة.. لنصنع قطعاً تعيش معك للأبد
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            في زمن الإنتاج الاستهلاكي السريع، تأسست LUMO كتحية تقدير للصنعة التراثية الصبورة. نختار ألياف الكتان الطبيعية غير المعالجة كيميائياً، وأخشاب السنديان والزان المجففة طبيعياً تحت الشمس، لنصنع قطعاً تبوح بحكاية دفء في كل زاوية من منزلك.
+          </p>
+<div class="space-y-3 pt-2">
+<div class="flex items-start gap-3 group">
+<div class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 transition-transform duration-300 group-hover:scale-110">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">صباغة نباتية صديقة للبشرة</h4>
+<p class="font-body-sm text-body-sm text-outline">مفروشاتنا تخلو تماماً من الأصباغ الاصطناعية المسببة للتحسس.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 group">
+<div class="w-8 h-8 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center shrink-0 mt-0.5 transition-transform duration-300 group-hover:scale-110">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">إضاءة مدروسة بيولوجياً</h4>
+<p class="font-body-sm text-body-sm text-outline">أغطية الأباجورات مصنوعة من سمك كتان خاص يمنح درجة حرارة لونية تبعث على الاسترخاء.</p>
+</div>
+</div>
+</div>
+<div class="pt-4">
+<a class="btn-luxury inline-flex items-center gap-3 px-6 py-3 rounded-lg bg-surface-container-high text-on-surface hover:bg-primary hover:text-on-primary transition-all font-title-md text-title-md shadow-sm group" href="#">
+<span>اقرأ كتاب الحِرفة (LUMO Craft Journal)</span>
+<span class="material-symbols-outlined text-sm rtl:rotate-180 transition-transform duration-300 group-hover:-translate-x-1.5">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Room Inspiration ('تسوق حسب الغرفة') -->
+<section class="w-full py-space-xl bg-surface-container-low">
+<div class="w-full px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-lg space-y-2">
+<span class="font-label-md text-label-md text-primary tracking-widest block">أفكار تنسيق متكاملة</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">تسوق بتناغم لكل ركن في بيتك</h2>
+<p class="font-body-md text-body-md text-outline">
+          لا داعي للحيرة في ملاءمة الإضاءة مع مفروشات السرير؛ صممنا لك باقات ديكورية متناسقة هندسياً ولونياً.
+        </p>
+</div>
+<!-- Room Mood Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Room 1: Bedroom Sanctuary -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm luxury-card-hover flex flex-col group border border-transparent hover:border-primary-fixed/80">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Cozy Scandinavian and Japandi inspired bedroom with textured linen bedding, two matching wooden table lamps glowing warmly on floating nightstands, minimalist sanctuary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmN4KoaUppYDnkSAzvwpmRahg7N85vUGi6ki64KYa6l_XP0yqXbmzrKZgwnDDBfgUhHNcmsD8B2pLGhcIrG9Dpvpli9l-plTAhspY8fJtDS00uzacL-9rHPRGf2bivx8f-UppASL6DIVZd7vevT5r5lNPlo8ahJev4fd13Uoe-jvEAMcz5-VoOCEqE7azpHIDmpfgwenou43cXe4mQu9Ng4chI91tK6tJnQjZWJM5NgxaBtCr1yzip8g"/>
+<span class="absolute top-4 start-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface shadow-sm">
+              واحة النوم الهادئ
+            </span>
+</div>
+<div class="p-gutter space-y-3 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">مجموعة غرفة النوم (Sanctuary)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+                مزيج يجمع طقم سرير كتان نقي بلون البيج الرملي، مع زوج من أباجورات الخشب الصلب ذات الإضاءة الليلية الخافتة.
+              </p>
+</div>
+<div class="pt-2 border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-primary font-semibold">تضم 3 قطع متناسقة</span>
+<a class="font-title-md text-title-md text-on-surface hover:text-primary transition-colors flex items-center gap-1 group/link" href="#">
+<span>تصفح الباقة</span>
+<span class="material-symbols-outlined text-sm rtl:rotate-180 transition-transform duration-300 group-hover/link:-translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Room 2: Living & Salon Gathering -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm luxury-card-hover flex flex-col group border border-transparent hover:border-primary-fixed/80">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Warm Arabic contemporary living room salon with layered handwoven wool rugs, brass pendant chandelier, and oversized soft linen accent pillows on an organic curved sofa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOXvau8jbXrshOQ2vWHF-y-JxQFDzOP5V8P_tCnKF3TSDmoVTkppyH9x3rWCc5GoFIiMA4s2h6DjjFqvOoJM2lYAdD6p3Sm7NhHHh17nYfYyUi4MAc7N784HE97R2f9eaxtLZpXtea8dzqNt9l0bYLSskBcIlNL2sgoJI1OY-yk8kbuMhJ575LKN67eXTyyqdF0HthdLF7nNbpKAYspbVwskPuBBByaYutBP6LNb9B1jttvv4mZEgWNg"/>
+<span class="absolute top-4 start-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface shadow-sm">
+              مجلس العائلة والضيوف
+            </span>
+</div>
+<div class="p-gutter space-y-3 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">مجموعة الصالون والمجلس (Salon)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+                ثريا نحاسية فارهة بقطر واسع تتناغم مع شالات الكنب المنسوجة يدوياً ووسائد التطريز البدوية المعاصرة.
+              </p>
+</div>
+<div class="pt-2 border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-primary font-semibold">تضم 4 قطع مميزة</span>
+<a class="font-title-md text-title-md text-on-surface hover:text-primary transition-colors flex items-center gap-1 group/link" href="#">
+<span>تصفح الباقة</span>
+<span class="material-symbols-outlined text-sm rtl:rotate-180 transition-transform duration-300 group-hover/link:-translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Room 3: Reading & Meditation Nook -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm luxury-card-hover flex flex-col group border border-transparent hover:border-primary-fixed/80">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Cozy reading armchair nook next to an organic ceramic floor lamp, thick textured wool throw draped gently over the armrest, a warm wooden side table with a cup of tea" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrZxXTv91hEOVXknLH_t4RA3PHp5YJmpm4zJPjI-Zq8xX9OAev2i84tmm4JkEOS1_4kIfh9fUT9P3q30fZwdVULyedubVeamCoSokQESdUOeGsrbS3ssk2kdJfPgNs3QbySr7rcyKxnFegQsoc1sXgaPU3MsYxDd4A0DgcIBcKewlrQ7HdKmiDLWuuuxtCOsroQaK0riy-PpSA7_t1YfoODAcmGsR8lgiEBQ0HxrXnx-W5nq-lE_8pcA"/>
+<span class="absolute top-4 start-4 bg-surface/90 backdrop-blur-md px-3 py-1 rounded-full font-label-sm text-label-sm text-on-surface shadow-sm">
+              زاوية القراءة والاسترخاء
+            </span>
+</div>
+<div class="p-gutter space-y-3 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">ركن الاستجمام (Reading Nook)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-relaxed">
+                أباجورة فخارية موجهة للقراءة المريحة دون إجهاد العين، مع بطانية صوفية منسوجة يدوياً للمساء الهادئ.
+              </p>
+</div>
+<div class="pt-2 border-t border-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-primary font-semibold">تضم قطعتين رئيسيتين</span>
+<a class="font-title-md text-title-md text-on-surface hover:text-primary transition-colors flex items-center gap-1 group/link" href="#">
+<span>تصفح الباقة</span>
+<span class="material-symbols-outlined text-sm rtl:rotate-180 transition-transform duration-300 group-hover/link:-translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Verified Luxury Reviews & Community -->
+<section class="w-full py-space-xl bg-surface">
+<div class="w-full px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-space-lg">
+<div>
+<span class="font-label-md text-label-md text-primary tracking-widest block mb-1">تجارب حقيقية</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">ما يقوله أصحاب البيوت الراقية</h2>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex text-amber-600">
+<span class="material-symbols-outlined star-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold">4.9 / 5</span>
+<span class="font-body-sm text-body-sm text-outline">(أكثر من 850 عميلاً ومصمماً)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Review 1 -->
+<div class="review-card bg-surface-container-lowest p-6 rounded-2xl shadow-sm luxury-card-hover flex flex-col justify-between space-y-4 border border-transparent hover:border-primary-fixed/50">
+<div class="space-y-3">
+<div class="flex text-amber-600 gap-0.5">
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              "أباجورة طيبة أضافت روحاً دافئة خيالية لغرفة النوم. ملمس الخشب المصقول وجودة الكتان المطرز يثبتان أن وراء هذا المنتج فنانين حقيقيين وليس مصنعاً عادياً."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-on-primary-fixed transition-transform duration-300 hover:scale-110">
+              م.ن
+            </div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">مها النجار</h4>
+<span class="font-label-sm text-label-sm text-outline">مهندسة تصميم داخلي - الشيخ زايد</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="review-card bg-surface-container-lowest p-6 rounded-2xl shadow-sm luxury-card-hover flex flex-col justify-between space-y-4 border border-transparent hover:border-primary-fixed/50">
+<div class="space-y-3">
+<div class="flex text-amber-600 gap-0.5">
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              "طقم مفرش السرير الكتان من أروع ما اشتريت. النوم عليه مريح جداً وملمسه ينعم مع كل غسلة. التغليف ورائحة العطر الطبيعي عند فتح الصندوق تجربة فخمة للغاية."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center font-bold text-on-secondary-container transition-transform duration-300 hover:scale-110">
+              ط.ع
+            </div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">طارق عيسى</h4>
+<span class="font-label-sm text-label-sm text-outline">عميل موثق - التجمع الخامس</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="review-card bg-surface-container-lowest p-6 rounded-2xl shadow-sm luxury-card-hover flex flex-col justify-between space-y-4 border border-transparent hover:border-primary-fixed/50">
+<div class="space-y-3">
+<div class="flex text-amber-600 gap-0.5">
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined star-icon text-[18px] transition-transform duration-300" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              "ثريا أصيل النحاسية هي بطلة الصالون بلا منازع. كل ضيف يدخل يسألني من أين اقتنيتها. فخور بوجود علامة مصرية بهذه الحرفية العالمية والأناقة الهادئة."
+            </p>
+</div>
+<div class="flex items-center gap-3 pt-3 border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center font-bold text-on-tertiary-fixed transition-transform duration-300 hover:scale-110">
+              د.س
+            </div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">د. سارة المنشاوي</h4>
+<span class="font-label-sm text-label-sm text-outline">عميل موثق - المعادي</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bespoke Atelier & Custom Orders Banner -->
+<section class="w-full py-space-xl bg-surface-container-high" id="custom-atelier">
+<div class="w-full px-margin">
+<div class="bg-primary text-on-primary rounded-3xl p-8 lg:p-space-lg shadow-xl relative overflow-hidden group">
+<!-- Subtle Pattern Decor Overlay & Breathing Light -->
+<div class="ambient-warm-glow pointer-events-none absolute -end-24 -bottom-24 w-96 h-96 rounded-full bg-primary-container/40 blur-3xl"></div>
+<div class="pointer-events-none absolute -start-24 -top-24 w-80 h-80 rounded-full bg-tertiary-fixed/15 blur-2xl"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-8 space-y-4">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest/15 text-primary-fixed font-label-sm text-label-sm transition-transform duration-300 hover:scale-105">
+<span class="material-symbols-outlined text-[15px]">design_services</span>
+              استوديو LUMO المعماري للطلبات الخاصة
+            </span>
+<h2 class="font-headline-lg text-headline-lg text-surface leading-tight drop-shadow-sm">
+              هل تبحث عن قياسات أو خامات خاصة لمشروعك؟
+            </h2>
+<p class="font-body-lg text-body-lg text-surface-container-highest/90 max-w-2xl leading-relaxed">
+              نوفر لمهندسي الديكور وأصحاب الفيلات خدمة تخصيص كاملة: اختيار نوع الخشب، تطريزات الكتان الخاصة، وضبط مقاسات وارتفاعات النجف لتلائم تفاصيل منزلك بدقة متناهية.
+            </p>
+<div class="flex flex-wrap items-center gap-6 pt-2 font-body-sm text-body-sm text-surface-container-high">
+<div class="flex items-center gap-2 group/tag">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover/tag:scale-125">verified</span>
+<span>استشارة مجانية مع المصمم الحرفي</span>
+</div>
+<div class="flex items-center gap-2 group/tag">
+<span class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover/tag:scale-125">palette</span>
+<span>عينات أقمشة وأخشاب مرسلة لبيتك</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
+<a class="btn-luxury bg-surface text-on-surface font-title-md text-title-md px-6 py-3.5 rounded-lg hover:bg-surface-container hover:text-primary transition-all text-center shadow-md hover:shadow-lg" href="#">
+              طلب استشارة وتفصيل خاص
+            </a>
+<a class="btn-luxury bg-transparent border border-outline-variant/50 text-surface font-title-md text-title-md px-6 py-3.5 rounded-lg hover:bg-primary-container hover:border-primary-container transition-all text-center flex items-center justify-center gap-2 shadow-sm" href="#">
+<span class="material-symbols-outlined text-lg">chat</span>
+<span>محادثة واتساب مباشرة</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript Engine for Light Simulation Switcher and Micro-Interactions -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const warmBtn = document.getElementById('toggle-ambient-warm');
+      const neutralBtn = document.getElementById('toggle-ambient-neutral');
+      const indicator = document.getElementById('ambient-mode-indicator');
+      const ambientController = document.getElementById('ambient-controller');
+      const body = document.body;
+
+      if (warmBtn && neutralBtn && indicator) {
+        warmBtn.addEventListener('click', () => {
+          indicator.textContent = 'دفء المساء (2700K Warm Filament)';
+          warmBtn.classList.replace('bg-surface-container', 'bg-primary');
+          warmBtn.classList.replace('text-on-surface', 'text-on-primary');
+          neutralBtn.classList.replace('bg-primary', 'bg-surface-container');
+          neutralBtn.classList.replace('text-on-primary', 'text-on-surface');
+          body.style.filter = 'sepia(0.08) saturate(1.05)';
+        });
+
+        neutralBtn.addEventListener('click', () => {
+          indicator.textContent = 'نهار مشمس محايد (4000K Daylight)';
+          neutralBtn.classList.replace('bg-surface-container', 'bg-primary');
+          neutralBtn.classList.replace('text-on-surface', 'text-on-primary');
+          warmBtn.classList.replace('bg-primary', 'bg-surface-container');
+          warmBtn.classList.replace('text-on-primary', 'text-on-surface');
+          body.style.filter = 'none';
+        });
+      }
+
+      // Wishlist toggle micro-interaction
+      const wishlistButtons = document.querySelectorAll('.wishlist-btn');
+      wishlistButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const icon = btn.querySelector('.material-symbols-outlined');
+          const isFilled = icon.style.fontVariationSettings && icon.style.fontVariationSettings.includes("'FILL' 1");
+          if (isFilled) {
+            icon.style.fontVariationSettings = "'FILL' 0";
+            btn.classList.remove('text-error');
+          } else {
+            icon.style.fontVariationSettings = "'FILL' 1";
+            btn.classList.add('text-error');
+            btn.animate([
+              { transform: 'scale(1)' },
+              { transform: 'scale(1.35)' },
+              { transform: 'scale(1)' }
+            ], { duration: 350, easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)' });
+          }
+        });
+      });
+
+      // Quick add feedback
+      const quickAddBtns = document.querySelectorAll('.quick-add-btn');
+      quickAddBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const originalText = btn.innerHTML;
+          btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>تمت الإضافة</span>';
+          btn.classList.add('bg-primary', 'text-on-primary');
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.classList.remove('bg-primary', 'text-on-primary');
+          }, 1600);
+        });
+      });
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface-variant pt-space-xl pb-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><div class="w-full px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter mb-space-xl"><div class="lg:col-span-4 space-y-4"><h3 class="font-headline-md text-headline-md text-primary tracking-tight">LUMO</h3><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-sm">استوديو حرفي لتصميم وحدات الإضاءة النادرة والمفروشات العضوية الخالصة. أخشاب صلبة، كتان نقي، وخيوط قطنية منتقاة بعناية لبيوت هادئة تعتز بالأصالة.</p><div class="pt-2"><span class="font-label-md text-label-md text-secondary block mb-1">ضمان الحرفية اليدوية</span><p class="font-body-sm text-body-sm text-outline">كل قطعة مختومة يدويًا من حرفيينا وتأتي مع شهادة أصالة ورقم فريد.</p></div></div><div class="lg:col-span-2 space-y-3"><h4 class="font-title-md text-title-md text-on-surface">المجموعات</h4><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200" href="#">نجف الكتان العضوي</a></li><li><a class="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200" href="#">أباجورات الخزف اليدوي</a></li><li><a class="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200" href="#">أطقم سرير قطن مصري</a></li><li><a class="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200" href="#">مفارش صوف منسوجة</a></li><li><a class="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200" href="#">قطع حصرية محدودة</a></li></ul></div><div class="lg:col-span-2 space-y-3"><h4 class="font-title-md text-title-md text-on-surface">خدمات LUMO</h4><ul class="space-y-2 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200" href="#">برنامج مهندسي الديكور (Trade)</a></li><li><a class="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200" href="#">الطلبات والتفصيل الخاص</a></li><li><a class="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200" href="#">دليل العناية بالكتان والخزف</a></li><li><a class="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200" href="#">سياسة الشحن والاسترجاع</a></li><li><a class="hover:text-primary transition-colors inline-block hover:translate-x-1 duration-200" href="#">الأسئلة الشائعة</a></li></ul></div><div class="lg:col-span-4 space-y-4"><h4 class="font-title-md text-title-md text-on-surface">النشرة البريدية للمجموعات الخاصة</h4><p class="font-body-sm text-body-sm text-outline leading-relaxed">انضم لأصدقاء LUMO واحصل على دعوات حصرية لمعارض الدفعة الأولى وإرشادات تنسيق الديكور الدافئ.</p><form class="flex items-center gap-2 pt-1"><div class="relative flex-1"><input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm px-4 py-2.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary shadow-sm transition-all duration-300" placeholder="بريدك الإلكتروني" type="email"/></div><button class="btn-luxury bg-primary text-on-primary font-label-md text-label-md px-5 py-2.5 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shrink-0 shadow-sm" type="button">اشتراك</button></form><div class="flex items-center gap-3 pt-3 text-outline"><span class="font-label-sm text-label-sm">تواصل:</span><a class="hover:text-primary transition-colors font-body-sm" href="#">إنستغرام</a><span class="text-outline-variant">•</span><a class="hover:text-primary transition-colors font-body-sm" href="#">بينترست</a><span class="text-outline-variant">•</span><a class="hover:text-primary transition-colors font-body-sm" href="#">واتساب كونسيرج</a></div></div></div><div class="pt-space-md border-t border-surface-container flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-outline"><p>© 2025 لومو LUMO للحرف الفاخرة. جميع الحقوق محفوظة.</p><div class="flex items-center gap-6"><a class="hover:text-on-surface transition-colors" href="#">الشروط والأحكام</a><a class="hover:text-on-surface transition-colors" href="#">سياسة الخصوصية</a><a class="hover:text-on-surface transition-colors" href="#">الاستدامة والحِرفة</a></div></div></div></footer></body></html>
